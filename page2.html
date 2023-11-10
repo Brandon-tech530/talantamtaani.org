@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success Message Example</title>
+    <style>
+        /* Styling for the success message */
+        .success-message {
+            display: none; /* Initially hidden */
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Website</h1>
+    
+    <!-- Success message container -->
+    <div class="success-message" id="successMessage">
+        Task Successfully Completed!
+    </div>
+
+    <!-- Your form goes here -->
+    <form id="myForm">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- JavaScript to show the success message on form submission -->
+    <script>
+        const form = document.getElementById("myForm");
+        const successMessage = document.getElementById("successMessage");
+
+        // Function to show the success message
+        function showSuccessMessage() {
+            successMessage.style.display = "block";
+            setTimeout(function () {
+                successMessage.style.display = "none";
+            }, 3000); // Hide the message after 3 seconds (adjust as needed)
+        }
+
+        // Event listener to show the success message when the form is submitted
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting (for this example)
+            showSuccessMessage();
+        });
+    </script>
+</body>
+</html>
+

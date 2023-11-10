@@ -1,0 +1,5 @@
+.webdev-image{
+    display:block;
+    margin: 20px auto 20px auto; /* margin top right bottom left*/
+    max-width: 50%;
+}
